@@ -1,0 +1,44 @@
+import 'package:flex/ui/screens/auth/login/login_client_view.dart';
+import 'package:flex/ui/screens/auth/register/register_client_view.dart';
+import 'package:flex/ui/screens/choose_user/choose_user_view.dart';
+import 'package:flex/ui/screens/forgot_password/forgot_password.dart';
+import 'package:flex/ui/screens/home/home_view.dart';
+import 'package:flex/ui/screens/splash/splash_view.dart';
+import 'package:go_router/go_router.dart';
+
+abstract class AppRouter {
+  static const kHomeView = '/homeView';
+  static const kLoginClientView = '/LoginClientView';
+  static const kRegisterClientView = '/RegisterClientView';
+  static const kChooseUserView = '/ChooseUserView';
+  static const kForgotPasswordView = '/ForgotPasswordView';
+
+  static final router = GoRouter(
+    routes: [
+      GoRoute(
+        path: "/",
+        builder: (context, state) => const SplashView(),
+      ),
+      GoRoute(
+        path: kHomeView,
+        builder: (context, state) => const HomeView(),
+      ),
+      GoRoute(
+        path: kLoginClientView,
+        builder: (context, state) => const LoginClientView(),
+      ),
+      GoRoute(
+        path: kRegisterClientView,
+        builder: (context, state) => const RegisterClientView(),
+      ),
+      GoRoute(
+        path: kChooseUserView,
+        builder: (context, state) => const ChooseUserView(),
+      ),
+      GoRoute(
+        path: kForgotPasswordView,
+        builder: (context, state) => const ForgotPasswordView(),
+      ),
+    ],
+  );
+}
