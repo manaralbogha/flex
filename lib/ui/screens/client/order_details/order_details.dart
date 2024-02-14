@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flex/ui/helpers/app_colors.dart';
 import 'package:flex/ui/helpers/size_config.dart';
 import 'package:flex/ui/helpers/space_widgets.dart';
@@ -9,6 +11,7 @@ class OrderDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log("test");
     return Scaffold(
       body: Column(children: [
         Container(
