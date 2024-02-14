@@ -2,36 +2,38 @@ import 'package:flex/ui/helpers/app_colors.dart';
 import 'package:flex/ui/helpers/size_config.dart';
 import 'package:flex/ui/helpers/space_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
-class HeaderOrderDetailsWidget extends StatelessWidget {
-  const HeaderOrderDetailsWidget({
+class CustomHeader extends StatelessWidget {
+  const CustomHeader({
     super.key,
+    required this.icon,
+    required this.text,
+    required this.onPressed,
   });
+  final IconData icon;
+  final String text;
+  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: SizeConfig.defaultSize * 1.5),
       width: double.infinity,
-      height: SizeConfig.defaultSize * 20,
+      height: SizeConfig.defaultSize * 16,
       color: AppColors.defaultColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Row(
             mainAxisSize: MainAxisSize.max,
-            // crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               IconButton(
-                onPressed: () {
-                  context.pop();
-                },
-                icon: const Icon(Icons.arrow_back_ios),
+                onPressed: onPressed,
+                icon: Icon(icon),
                 color: Colors.white,
               ),
               Text(
-                "Order",
+                text,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: SizeConfig.defaultSize * 2,

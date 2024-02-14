@@ -1,8 +1,9 @@
 import 'package:flex/ui/helpers/app_colors.dart';
 import 'package:flex/ui/helpers/size_config.dart';
 import 'package:flex/ui/helpers/space_widgets.dart';
-import 'package:flex/ui/screens/client/client_order_details/widget/header_order_details_widget.dart';
+import 'package:flex/ui/widgets/custom_header.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ClientOrderDetailsView extends StatelessWidget {
   const ClientOrderDetailsView({super.key});
@@ -23,7 +24,12 @@ class OrderDetailsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      const HeaderOrderDetailsWidget(),
+      CustomHeader(
+          icon: Icons.arrow_back_ios,
+          text: "Order",
+          onPressed: () {
+            context.pop();
+          }),
       Expanded(
         child: ListView.builder(
           physics: const BouncingScrollPhysics(),

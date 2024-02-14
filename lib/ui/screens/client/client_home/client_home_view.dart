@@ -3,8 +3,8 @@ import 'package:flex/ui/helpers/app_colors.dart';
 import 'package:flex/ui/helpers/size_config.dart';
 import 'package:flex/ui/helpers/space_widgets.dart';
 import 'package:flex/ui/screens/client/client_home/widget/container_widget.dart';
-import 'package:flex/ui/screens/client/client_home/widget/drawer_widget.dart';
 import 'package:flex/ui/screens/client/client_home/widget/header_widget.dart';
+import 'package:flex/ui/widgets/drawer/custom_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -17,7 +17,7 @@ class HomeClientView extends StatelessWidget {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: AppColors.defaultColor,
-      drawer: const DrawerWidget(),
+      drawer: const CustomDrawer(),
       body: HomeClientBody(scaffoldKey: scaffoldKey),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
