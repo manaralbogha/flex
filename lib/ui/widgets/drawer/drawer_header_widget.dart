@@ -17,6 +17,7 @@ class DrawerHeaderWidget extends StatelessWidget {
       color: AppColors.defaultColor,
       child: InkWell(
         onTap: () {
+          context.pop();
           context.push(AppRouter.kClientProfileView);
         },
         child: Padding(
