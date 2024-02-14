@@ -20,6 +20,7 @@ class CustomTextField extends StatelessWidget {
   final bool autofocus;
   final TextInputAction? textInputAction;
   final TextEditingController controller;
+  final Color? borderSideColor;
   const CustomTextField({
     super.key,
     this.width,
@@ -39,6 +40,7 @@ class CustomTextField extends StatelessWidget {
     this.textInputAction,
     this.onFieldSubmitted,
     required this.controller,
+    this.borderSideColor,
   });
 
   @override
@@ -89,8 +91,8 @@ class CustomTextField extends StatelessWidget {
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(5.0),
-            borderSide: const BorderSide(
-              color: Colors.grey,
+            borderSide: BorderSide(
+              color: borderSideColor ?? Colors.grey,
             ),
           ),
         ),
