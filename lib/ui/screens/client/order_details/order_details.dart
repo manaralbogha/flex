@@ -11,7 +11,6 @@ class OrderDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log("test");
     return Scaffold(
       body: Column(children: [
         Container(
