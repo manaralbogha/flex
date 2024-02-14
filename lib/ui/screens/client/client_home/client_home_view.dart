@@ -2,8 +2,9 @@ import 'package:flex/logic/core/app_router.dart';
 import 'package:flex/ui/helpers/app_colors.dart';
 import 'package:flex/ui/helpers/size_config.dart';
 import 'package:flex/ui/helpers/space_widgets.dart';
-import 'package:flex/ui/screens/client/home/widget/container_widget.dart';
-import 'package:flex/ui/screens/client/home/widget/header_widget.dart';
+import 'package:flex/ui/screens/client/client_home/widget/container_widget.dart';
+import 'package:flex/ui/screens/client/client_home/widget/drawer_widget.dart';
+import 'package:flex/ui/screens/client/client_home/widget/header_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -16,7 +17,7 @@ class HomeClientView extends StatelessWidget {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: AppColors.defaultColor,
-      drawer: const Drawer(),
+      drawer: const DrawerWidget(),
       body: HomeClientBody(scaffoldKey: scaffoldKey),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
@@ -77,7 +78,7 @@ class HomeClientBody extends StatelessWidget {
                   ContainerWidget(
                     icon: Icons.hourglass_bottom_outlined,
                     onTap: () {
-                      context.push(AppRouter.kOrderDetailsView);
+                      context.push(AppRouter.kClientOrderDetailsView);
                     },
                     text: "Waiting for the delivery person",
                   ),
