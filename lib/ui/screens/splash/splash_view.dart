@@ -67,7 +67,7 @@ class _SplashViewState extends State<SplashBody>
     // final String? token = await CacheHelper.getData(key: "token");
     // log(lang.toString());
     bool x = false;
-    if (x == true) {
+    if (x == false) {
       context.pushReplacement(AppRouter.kHomeClientView);
     } else {
       context.pushReplacement(AppRouter.kChooseUserView);

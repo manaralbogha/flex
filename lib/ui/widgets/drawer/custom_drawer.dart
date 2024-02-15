@@ -36,7 +36,12 @@ class CustomDrawer extends StatelessWidget {
             thickness: 1.5,
           ),
           CustomListTileWidget(
-              icon: Icons.wallet, text: "Wallet", onTap: () {}),
+              icon: Icons.wallet,
+              text: "Wallet",
+              onTap: () {
+                context.pop();
+                context.push(AppRouter.kClientWalletView);
+              }),
           Divider(
             endIndent: SizeConfig.defaultSize * 2,
             indent: SizeConfig.defaultSize * 2,
