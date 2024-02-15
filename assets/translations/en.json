@@ -10,5 +10,23 @@
   "email": "E-mail",
   "confirm_password": "Confirm Password",
   "register": "SIGN UP",
-  "do_you_have_an_account": "Do you have an account?"
+  "do_you_have_an_account": "Do you have an account?",
+  "homepage":"Home page",
+  "wallet": "Wallet",
+  "incomingmessages": "Incoming messages",
+  "changelanguage": "Changelanguage", 
+  "logout": "Logout",
+  "worktoday": "Work today",
+  "neworder": "New Order",
+  "offerssubmitted": "Offers Submitted",
+  "from": "From",
+  "to": "To",
+  "date":"Date", 
+  "governorate": "Governorate",
+  "zone":"Zone",
+  "shippingvalues": "Shipping Values",
+  "save": "Save"
+
+
+
 }

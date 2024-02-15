@@ -2,12 +2,16 @@ import 'package:flex/ui/screens/auth/login/login_client_view.dart';
 import 'package:flex/ui/screens/auth/register/register_client_view.dart';
 import 'package:flex/ui/screens/choose_user/choose_user_view.dart';
 import 'package:flex/ui/screens/client/client_home/client_home_view.dart';
+import 'package:flex/ui/screens/client/client_order_details/client_order_details_view.dart';
+import 'package:flex/ui/screens/client/client_profile/client_profile.dart';
+import 'package:flex/ui/screens/client/client_setting/client_setting.dart';
 import 'package:flex/ui/screens/client/client_wallet/client_wallet.dart';
 import 'package:flex/ui/screens/forgot_password/forgot_password.dart';
-import 'package:flex/ui/screens/client/client_profile/client_profile.dart';
-import 'package:flex/ui/screens/client/client_order_details/client_order_details_view.dart';
-import 'package:flex/ui/screens/client/client_setting/client_setting.dart';
+import 'package:flex/ui/screens/provider/change%20language/providerchangelang.dart';
 import 'package:flex/ui/screens/provider/home/screen/providerhomescreen.dart';
+import 'package:flex/ui/screens/provider/provider%20profile/providerprofile.dart';
+import 'package:flex/ui/screens/provider/provider%20settings/providersettings.dart';
+import 'package:flex/ui/screens/provider/provider%20wallet/screen/providerwallet.dart';
 import 'package:flex/ui/screens/splash/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -23,6 +27,10 @@ abstract class AppRouter {
   static const kClientProfileView = '/ClientProfileView';
   static const kClientSettingView = '/ClientSettingView';
   static const kClientWalletView = '/ClientWalletView';
+  static const kProviderWallet = '/providerwallet';
+  static const kProviderProfile = '/providerprofile';
+  static const kProviderSetting = '/providersettings';
+  static const kProviderChangeLanguage = '/providerchangelang';
 
   static final router = GoRouter(
     routes: [
@@ -64,11 +72,31 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: kproviderHomescren,
-        builder: (context, state) => const ProviderHomeScreen(),
+        builder: (context, state) => ProviderHomeScreen(),
       ),
       GoRoute(
         path: kClientWalletView,
         builder: (context, state) => const ClientWalletView(),
+      ),
+      GoRoute(
+        path: kProviderWallet,
+        builder: (context, state) => const ProviderWalletScreen(),
+      ),
+      GoRoute(
+        path: kProviderWallet,
+        builder: (context, state) => const ProviderWalletScreen(),
+      ),
+      GoRoute(
+        path: kProviderProfile,
+        builder: (context, state) => const ProviderProfileScreen(),
+      ),
+      GoRoute(
+        path: kProviderSetting,
+        builder: (context, state) => const ProviderSettingsScreen(),
+      ),
+      GoRoute(
+        path: kProviderChangeLanguage,
+        builder: (context, state) => const ProviderChangeLanguageScreen(),
       ),
     ],
   );

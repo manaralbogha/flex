@@ -21,9 +21,11 @@ class CustomTextField extends StatelessWidget {
   final TextInputAction? textInputAction;
   final TextEditingController controller;
   final Color? borderSideColor;
+  final Color? color;
   const CustomTextField({
     super.key,
     this.width,
+    this.color,
     this.hintText,
     this.suffixIconOnTap,
     this.suffixIcon,
@@ -45,7 +47,9 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      decoration: BoxDecoration(
+          color: color ?? Colors.white, borderRadius: BorderRadius.circular(10)),
       width: width ?? SizeConfig.defaultSize * 39,
       child: TextFormField(
         controller: controller,
@@ -92,7 +96,7 @@ class CustomTextField extends StatelessWidget {
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(5.0),
             borderSide: BorderSide(
-              color: borderSideColor ?? Colors.grey,
+              color: borderSideColor ?? Colors.white,
             ),
           ),
         ),
