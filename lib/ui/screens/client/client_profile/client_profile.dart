@@ -84,7 +84,7 @@ class ClientProfileBody extends StatelessWidget {
                   ],
                 ),
               ),
-              VerticalSpace(2),
+              const VerticalSpace(2),
               CustomListTileWidget(
                 icon: Icons.settings,
                 text: "Setting",
