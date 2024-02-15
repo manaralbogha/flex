@@ -12,8 +12,10 @@ class HomeItemWidget extends StatelessWidget {
   final String nottifactionNubmer;
   @override
   Widget build(BuildContext context) {
+    print("test");
     return InkWell(
       onTap: onPressed,
+    
       child: Container(
         decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(10)),
