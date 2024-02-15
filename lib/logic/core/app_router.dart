@@ -1,11 +1,14 @@
 import 'package:flex/ui/screens/auth/login/login_client_view.dart';
 import 'package:flex/ui/screens/auth/register/register_client_view.dart';
 import 'package:flex/ui/screens/choose_user/choose_user_view.dart';
+
+import 'package:flex/ui/screens/forgot_password/forgot_password.dart';
+
 import 'package:flex/ui/screens/client/client_profile/client_profile.dart';
 import 'package:flex/ui/screens/client/client_order_details/client_order_details_view.dart';
 import 'package:flex/ui/screens/client/client_setting/client_setting.dart';
-import 'package:flex/ui/screens/forgot_password/forgot_password.dart';
-import 'package:flex/ui/screens/client/client_home/client_home_view.dart';
+import 'package:flex/ui/screens/provider/home/screen/providerhomescreen.dart';
+
 import 'package:flex/ui/screens/splash/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -15,6 +18,10 @@ abstract class AppRouter {
   static const kRegisterClientView = '/RegisterClientView';
   static const kChooseUserView = '/ChooseUserView';
   static const kForgotPasswordView = '/ForgotPasswordView';
+
+  static const kOrderDetailsView = '/OrderDetailsView';
+  static const kproviderHomescren = "/providerhomescreen";
+
   static const kClientOrderDetailsView = '/ClientOrderDetailsView';
   static const kClientProfileView = '/ClientProfileView';
   static const kClientSettingView = '/ClientSettingView';
@@ -56,6 +63,10 @@ abstract class AppRouter {
       GoRoute(
         path: kClientSettingView,
         builder: (context, state) => const ClientSettingView(),
+      ),
+      GoRoute(
+        path: kproviderHomescren,
+        builder: (context, state) => const ProviderHomeScreen(),
       ),
     ],
   );
