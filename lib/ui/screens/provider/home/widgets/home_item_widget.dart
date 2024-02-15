@@ -12,7 +12,6 @@ class HomeItemWidget extends StatelessWidget {
   final String nottifactionNubmer;
   @override
   Widget build(BuildContext context) {
-    print("test");
     return InkWell(
       onTap: onPressed,
     
@@ -23,7 +22,6 @@ class HomeItemWidget extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 5),
         child: Row(
           children: [
-            // الصفحة الرئيسيه
             Text(label,
                 style: const TextStyle(
                     color: Color(0xff100f1d),

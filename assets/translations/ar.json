@@ -10,5 +10,20 @@
   "email": "البريد الالكتروني",
   "confirm_password": "تاكيد كلمة المرور",
   "register": "تسجيل",
-  "do_you_have_an_account": "هل لديك حساب؟"
+  "do_you_have_an_account": "هل لديك حساب؟",
+  "homepage":"الصفحة الرئيسيه",
+  "wallet": "المحفظه",
+  "incomingmessages": "الرسائل الوارده",
+  "changelanguage": "تغير اللغه", 
+  "logout": "تسجيل خروج",
+  "worktoday": "عمل اليوم",
+  "neworder": "الطلبات الجديده",
+  "offerssubmitted": "العروض المقدمه",
+  "from": "من",
+  "to": "الي",
+  "date":"التاريخ", 
+  "governorate": "المحافظه",
+  "zone":"المنطقه",
+  "shippingvalues": "قيمه الشحن",
+  "save": "حفظ"
 }
