@@ -1,9 +1,10 @@
 import 'package:flex/ui/screens/auth/login/login_client_view.dart';
 import 'package:flex/ui/screens/auth/register/register_client_view.dart';
 import 'package:flex/ui/screens/choose_user/choose_user_view.dart';
+import 'package:flex/ui/screens/client/home/home_view.dart';
 import 'package:flex/ui/screens/client/order_details/order_details.dart';
 import 'package:flex/ui/screens/forgot_password/forgot_password.dart';
-import 'package:flex/ui/screens/client/home/home_view.dart';
+import 'package:flex/ui/screens/provider/home/screen/providerhomescreen.dart';
 import 'package:flex/ui/screens/splash/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -14,6 +15,7 @@ abstract class AppRouter {
   static const kChooseUserView = '/ChooseUserView';
   static const kForgotPasswordView = '/ForgotPasswordView';
   static const kOrderDetailsView = '/OrderDetailsView';
+  static const kproviderHomescren = "/providerhomescreen";
 
   static final router = GoRouter(
     routes: [
@@ -44,6 +46,10 @@ abstract class AppRouter {
       GoRoute(
         path: kOrderDetailsView,
         builder: (context, state) => const OrderDetailsView(),
+      ),
+      GoRoute(
+        path: kproviderHomescren,
+        builder: (context, state) => const ProviderHomeScreen(),
       ),
     ],
   );

@@ -19,7 +19,8 @@ class HomeClientView extends StatelessWidget {
       drawer: const Drawer(),
       body: HomeClientBody(scaffoldKey: scaffoldKey),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+        },
         backgroundColor: AppColors.defaultColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(100),

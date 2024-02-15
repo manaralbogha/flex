@@ -35,8 +35,12 @@ class ChooseUserBody extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ContainerChooseWidget(icon: Icons.fire_truck, onTap: () {}),
-            HorizontalSpace(2),
+            ContainerChooseWidget(
+                icon: Icons.fire_truck,
+                onTap: () {
+                  context.push(AppRouter.kproviderHomescren);
+                }),
+            const HorizontalSpace(2),
             ContainerChooseWidget(
               icon: Icons.work,
               onTap: () {
