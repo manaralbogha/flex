@@ -3,6 +3,7 @@ import 'package:flex/ui/screens/auth/register/register_client_view.dart';
 import 'package:flex/ui/screens/choose_user/choose_user_view.dart';
 import 'package:flex/ui/screens/client/client_profile/client_profile.dart';
 import 'package:flex/ui/screens/client/client_order_details/client_order_details_view.dart';
+import 'package:flex/ui/screens/client/client_setting/client_setting.dart';
 import 'package:flex/ui/screens/forgot_password/forgot_password.dart';
 import 'package:flex/ui/screens/client/client_home/client_home_view.dart';
 import 'package:flex/ui/screens/splash/splash_view.dart';
@@ -16,6 +17,7 @@ abstract class AppRouter {
   static const kForgotPasswordView = '/ForgotPasswordView';
   static const kClientOrderDetailsView = '/ClientOrderDetailsView';
   static const kClientProfileView = '/ClientProfileView';
+  static const kClientSettingView = '/ClientSettingView';
 
   static final router = GoRouter(
     routes: [
@@ -50,6 +52,10 @@ abstract class AppRouter {
       GoRoute(
         path: kClientProfileView,
         builder: (context, state) => const ClientProfileView(),
+      ),
+      GoRoute(
+        path: kClientSettingView,
+        builder: (context, state) => const ClientSettingView(),
       ),
     ],
   );
