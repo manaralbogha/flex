@@ -38,7 +38,7 @@ class DrawerHeaderWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              const HorizontalSpace(2),
+              const HorizontalSpace(1),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,14 +49,17 @@ class DrawerHeaderWidget extends StatelessWidget {
                       "name",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
+                  const VerticalSpace(.5),
                   Text(
                     "xxxxxxxxx@xxxxx.com",
                     style: TextStyle(
                       fontSize: SizeConfig.defaultSize * 1.3,
+                      color: Colors.white,
                     ),
                   ),
                 ],

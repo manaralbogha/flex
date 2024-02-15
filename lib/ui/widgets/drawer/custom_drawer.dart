@@ -1,9 +1,11 @@
+import 'package:flex/logic/core/app_router.dart';
 import 'package:flex/ui/helpers/app_colors.dart';
 import 'package:flex/ui/helpers/size_config.dart';
 import 'package:flex/ui/helpers/space_widgets.dart';
 import 'package:flex/ui/widgets/custom_list_tile.dart';
 import 'package:flex/ui/widgets/drawer/drawer_header_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({
@@ -23,7 +25,11 @@ class CustomDrawer extends StatelessWidget {
             child: DrawerHeaderWidget(),
           ),
           CustomListTileWidget(
-              icon: Icons.home, text: "Home Page", onTap: () {}),
+              icon: Icons.home,
+              text: "Home Page",
+              onTap: () {
+                context.go(AppRouter.kHomeClientView);
+              }),
           Divider(
             endIndent: SizeConfig.defaultSize * 2,
             indent: SizeConfig.defaultSize * 2,
