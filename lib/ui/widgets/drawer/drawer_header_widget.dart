@@ -72,7 +72,9 @@ class DrawerHeaderWidget extends StatelessWidget {
                   color: Colors.white30,
                   borderRadius: BorderRadius.circular(5),
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      context.push(AppRouter.kClientSettingView);
+                    },
                     child: Icon(
                       Icons.settings,
                       size: SizeConfig.defaultSize * 2,
