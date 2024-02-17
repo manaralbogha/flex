@@ -49,7 +49,8 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: color ?? Colors.white, borderRadius: BorderRadius.circular(10)),
+          color: color ?? Colors.white,
+          borderRadius: BorderRadius.circular(10)),
       width: width ?? SizeConfig.defaultSize * 39,
       child: TextFormField(
         controller: controller,
@@ -68,6 +69,7 @@ class CustomTextField extends StatelessWidget {
               return null;
             },
         onChanged: onChanged,
+        onTapOutside: (event) => FocusScope.of(context).unfocus(),
         onFieldSubmitted: onFieldSubmitted,
         decoration: InputDecoration(
           contentPadding:
