@@ -2,7 +2,7 @@ import 'package:flex/logic/core/app_router.dart';
 import 'package:flex/ui/helpers/app_colors.dart';
 import 'package:flex/ui/helpers/size_config.dart';
 import 'package:flex/ui/helpers/space_widgets.dart';
-import 'package:flex/ui/screens/provider/home/screen/widgets/buttom_sheet_function.dart';
+import 'package:flex/ui/screens/provider/home/widgets/buttom_sheet_function.dart';
 import 'package:flex/ui/screens/provider/home/widgets/home_item_widget.dart';
 import 'package:flex/ui/screens/provider/home/widgets/provider_home_drawer.dart';
 import 'package:flutter/material.dart';
