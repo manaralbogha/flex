@@ -9,8 +9,13 @@ import 'package:flex/ui/screens/client/client_wallet/client_wallet.dart';
 import 'package:flex/ui/screens/forgot_password/forgot_password.dart';
 import 'package:flex/ui/screens/provider/change%20language/providerchangelang.dart';
 import 'package:flex/ui/screens/provider/home/screen/providerhomescreen.dart';
+import 'package:flex/ui/screens/provider/provider%20add%20delivary%20price/providerdeliveryprice.dart';
+import 'package:flex/ui/screens/provider/provider%20offers/provideroffers.dart';
+import 'package:flex/ui/screens/provider/provider%20order%20details/providerorderdetails.dart';
+import 'package:flex/ui/screens/provider/provider%20orders/providerorders.dart';
 import 'package:flex/ui/screens/provider/provider%20profile/providerprofile.dart';
 import 'package:flex/ui/screens/provider/provider%20settings/providersettings.dart';
+import 'package:flex/ui/screens/provider/provider%20today%20task/providertodaytask.dart';
 import 'package:flex/ui/screens/provider/provider%20wallet/screen/providerwallet.dart';
 import 'package:flex/ui/screens/splash/splash_view.dart';
 import 'package:go_router/go_router.dart';
@@ -31,6 +36,11 @@ abstract class AppRouter {
   static const kProviderProfile = '/providerprofile';
   static const kProviderSetting = '/providersettings';
   static const kProviderChangeLanguage = '/providerchangelang';
+  static const kProviderNewOrders = '/providerorders';
+  static const kProviderTodayTask = '/providertodaytask';
+  static const kProviderOrderDetails = '/providerorderdetails';
+  static const kProviderAddDeliveryprice = '/providerdeliveryprice';
+  static const kProviderOffers = '/provideroffers';
 
   static final router = GoRouter(
     routes: [
@@ -97,6 +107,26 @@ abstract class AppRouter {
       GoRoute(
         path: kProviderChangeLanguage,
         builder: (context, state) => const ProviderChangeLanguageScreen(),
+      ),
+      GoRoute(
+        path: kProviderNewOrders,
+        builder: (context, state) => const ProviderOrdersScreen(),
+      ),
+      GoRoute(
+        path: kProviderTodayTask,
+        builder: (context, state) => const ProviderTodayTaskScreen(),
+      ),
+      GoRoute(
+        path: kProviderOrderDetails,
+        builder: (context, state) => const ProviderOrderDeatils(),
+      ),
+      GoRoute(
+        path: kProviderAddDeliveryprice,
+        builder: (context, state) => ProviderAddDeliveryCost(),
+      ),
+      GoRoute(
+        path: kProviderOffers,
+        builder: (context, state) => const ProviderOffers(),
       ),
     ],
   );

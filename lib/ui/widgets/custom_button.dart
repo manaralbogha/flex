@@ -23,9 +23,9 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: color ?? AppColors.defaultColor,
-      borderRadius: BorderRadius.circular(borderRadius ?? 25),
+      borderRadius: BorderRadius.circular(borderRadius ?? 10),
       child: InkWell(
-        borderRadius: BorderRadius.circular(borderRadius ?? 25),
+        borderRadius: BorderRadius.circular(borderRadius ?? 10),
         onTap: onTap,
         child: SizedBox(
           width: width ?? SizeConfig.screenWidth,
