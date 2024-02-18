@@ -45,7 +45,11 @@ class ProviderHomeDrawer extends StatelessWidget {
             thickness: 1.5,
           ),
           CustomListTileWidget(
-              icon: Icons.email, text: "Incoming messages", onTap: () {}),
+              icon: Icons.email,
+              text: "Incoming messages",
+              onTap: () {
+                context.push(AppRouter.kProviderIncomingMassages);
+              }),
           Divider(
             endIndent: SizeConfig.defaultSize * 2,
             indent: SizeConfig.defaultSize * 2,

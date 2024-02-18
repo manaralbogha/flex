@@ -1,3 +1,4 @@
+import 'package:flex/ui/helpers/size_config.dart';
 import 'package:flex/ui/helpers/space_widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -14,21 +15,22 @@ class HomeItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onPressed,
-    
       child: Container(
         decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             color: Color(0xffebf4f3)),
-        padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 5),
+        padding: EdgeInsets.symmetric(
+            vertical: SizeConfig.defaultSize * 2,
+            horizontal: SizeConfig.defaultSize / 1.2),
         child: Row(
           children: [
             Text(label,
-                style: const TextStyle(
-                    color: Color(0xff100f1d),
+                style: TextStyle(
+                    color: const Color(0xff100f1d),
                     fontWeight: FontWeight.w600,
                     fontFamily: "Cairo",
                     fontStyle: FontStyle.normal,
-                    fontSize: 16.0),
+                    fontSize: SizeConfig.defaultSize * 2),
                 textAlign: TextAlign.right),
             const HorizontalSpace(2),
             Container(
@@ -38,12 +40,12 @@ class HomeItemWidget extends StatelessWidget {
                   shape: BoxShape.circle,
                 ),
                 child: Text(nottifactionNubmer,
-                    style: const TextStyle(
-                        color: Color(0xffffffff),
+                    style: TextStyle(
+                        color: const Color(0xffffffff),
                         fontWeight: FontWeight.w700,
                         fontFamily: "Cairo",
                         fontStyle: FontStyle.normal,
-                        fontSize: 14.0),
+                        fontSize: SizeConfig.defaultSize * 1.8),
                     textAlign: TextAlign.right)),
             const Spacer(),
             const Icon(Icons.arrow_forward)
