@@ -15,6 +15,7 @@ import 'package:flex/ui/screens/provider/provider%20offers/provideroffers.dart';
 import 'package:flex/ui/screens/provider/provider%20order%20details/providerorderdetails.dart';
 import 'package:flex/ui/screens/provider/provider%20orders/providerorders.dart';
 import 'package:flex/ui/screens/provider/provider%20profile/providerprofile.dart';
+import 'package:flex/ui/screens/provider/provider%20rates/providerrates.dart';
 import 'package:flex/ui/screens/provider/provider%20settings/providersettings.dart';
 import 'package:flex/ui/screens/provider/provider%20today%20task/providertodaytask.dart';
 import 'package:flex/ui/screens/provider/provider%20wallet/screen/providerwallet.dart';
@@ -43,6 +44,7 @@ abstract class AppRouter {
   static const kProviderAddDeliveryprice = '/providerdeliveryprice';
   static const kProviderOffers = '/provideroffers';
   static const kProviderIncomingMassages = '/providerincomingmassages';
+  static const kProviderRates = '/providerrates';
 
   static final router = GoRouter(
     routes: [
@@ -133,6 +135,10 @@ abstract class AppRouter {
       GoRoute(
         path: kProviderIncomingMassages,
         builder: (context, state) => const ProviderIncomingMassages(),
+      ),
+      GoRoute(
+        path: kProviderRates,
+        builder: (context, state) => const ProviderRates(),
       ),
     ],
   );

@@ -101,7 +101,9 @@ class ClientProfileBody extends StatelessWidget {
               CustomListTileWidget(
                 icon: Icons.star,
                 text: "Ratings",
-                onTap: () {},
+                onTap: () {
+                  context.push(AppRouter.kProviderRates);
+                },
               ),
               Divider(
                 endIndent: SizeConfig.defaultSize * 2,
