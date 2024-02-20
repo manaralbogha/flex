@@ -10,6 +10,7 @@ import 'package:flex/ui/screens/forgot_password/forgot_password.dart';
 import 'package:flex/ui/screens/provider/change%20language/providerchangelang.dart';
 import 'package:flex/ui/screens/provider/home/screen/providerhomescreen.dart';
 import 'package:flex/ui/screens/provider/provider%20add%20delivary%20price/providerdeliveryprice.dart';
+import 'package:flex/ui/screens/provider/provider%20chat/providerchat.dart';
 import 'package:flex/ui/screens/provider/provider%20incoming%20masseages/providerincomingmassages.dart';
 import 'package:flex/ui/screens/provider/provider%20offers/provideroffers.dart';
 import 'package:flex/ui/screens/provider/provider%20order%20details/providerorderdetails.dart';
@@ -45,6 +46,7 @@ abstract class AppRouter {
   static const kProviderOffers = '/provideroffers';
   static const kProviderIncomingMassages = '/providerincomingmassages';
   static const kProviderRates = '/providerrates';
+  static const kProviderChatScreen = '/providerchat';
 
   static final router = GoRouter(
     routes: [
@@ -139,6 +141,10 @@ abstract class AppRouter {
       GoRoute(
         path: kProviderRates,
         builder: (context, state) => const ProviderRates(),
+      ),
+      GoRoute(
+        path: kProviderChatScreen,
+        builder: (context, state) => ProviderChat(),
       ),
     ],
   );
