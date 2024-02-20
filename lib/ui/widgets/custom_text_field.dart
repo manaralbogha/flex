@@ -15,6 +15,7 @@ class CustomTextField extends StatelessWidget {
   final TextInputType? keyboardType;
   final bool? obscureText;
   final int? maxLines;
+  final double? height;
   final int? maxLength;
   final String? initialValue;
   final bool autofocus;
@@ -22,12 +23,15 @@ class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final Color? borderSideColor;
   final Color? color;
+  final bool ischat;
   const CustomTextField({
     super.key,
     this.width,
+    this.ischat = false,
     this.color,
     this.hintText,
     this.suffixIconOnTap,
+    this.height,
     this.suffixIcon,
     this.prefixIcon,
     this.labelText,
@@ -52,6 +56,7 @@ class CustomTextField extends StatelessWidget {
           color: color ?? Colors.white,
           borderRadius: BorderRadius.circular(10)),
       width: width ?? SizeConfig.defaultSize * 39,
+      height: height,
       child: TextFormField(
         controller: controller,
         autofocus: autofocus,
@@ -69,7 +74,8 @@ class CustomTextField extends StatelessWidget {
               return null;
             },
         onChanged: onChanged,
-        onTapOutside: (event) => FocusScope.of(context).unfocus(),
+        onTapOutside:
+            ischat ? null : (event) => FocusScope.of(context).unfocus(),
         onFieldSubmitted: onFieldSubmitted,
         decoration: InputDecoration(
           contentPadding:
